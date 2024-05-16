@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fetchDataHelper from "../utils/helpers";
+import fetchImages from "../utils/api/nasa-images";
 // import Image from "next/image";
 
 interface ImageData {
@@ -17,7 +17,7 @@ const ImagesOfTheDay: React.FC = () => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     if (apiKey && apiUrl) {
-      fetchDataHelper(apiUrl, apiKey, setImageDataList);
+      fetchImages(apiUrl, apiKey, setImageDataList);
       setLoading(false);
     } else {
       console.error("API key or API URL is not defined.");

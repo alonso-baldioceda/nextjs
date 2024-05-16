@@ -6,7 +6,7 @@ interface ImageData {
   explanation: string;
 }
 
-const fetchDataHelper = async (
+const fetchImages = async (
   apiUrl: string,
   apiKey: string,
   setImageDataList: React.Dispatch<React.SetStateAction<ImageData[]>>
@@ -32,4 +32,4 @@ const fetchDataHelper = async (
   }
 };
 
-export default fetchDataHelper;
+export default fetchImages;
